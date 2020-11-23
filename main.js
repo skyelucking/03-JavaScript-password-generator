@@ -1,3 +1,4 @@
+
 //DOM elements
 const resultEL = document.getElementById('result');
 const lengthEL = document.getElementById('length');
