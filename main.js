@@ -1,20 +1,4 @@
 
-//Length Validation Function
-// function myFunction() {
-//     var x, text;
-  
-//     // Get the value of the input field with id="numb"
-//     x = document.getElementById("length").value;
-  
-//     // If x is Not a Number or less than one or greater than 10
-//     if (isNaN(x) || x < 8 || x > 128) {
-//       text = "Length must be greater than 8 and less than 128";
-//     } else {
-//       text = "Input OK";
-//     }
-//     document.getElementById("demo").innerHTML = text;
-// End of Validation Function
-
 //DOM elements
 const resultEL = document.getElementById('result');
 const lengthEL = document.getElementById('length');
