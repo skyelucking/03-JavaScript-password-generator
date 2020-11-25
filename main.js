@@ -1,4 +1,20 @@
 
+//Length Validation Function
+// function myFunction() {
+//     var x, text;
+  
+//     // Get the value of the input field with id="numb"
+//     x = document.getElementById("length").value;
+  
+//     // If x is Not a Number or less than one or greater than 10
+//     if (isNaN(x) || x < 8 || x > 128) {
+//       text = "Length must be greater than 8 and less than 128";
+//     } else {
+//       text = "Input OK";
+//     }
+//     document.getElementById("demo").innerHTML = text;
+// End of Validation Function
+
 //DOM elements
 const resultEL = document.getElementById('result');
 const lengthEL = document.getElementById('length');
@@ -24,6 +40,7 @@ generateEL.addEventListener('click', () => {
     const hasNumber = numbersEL.checked;
     const hasSymbol = symbolsEL.checked;
     
+if (length > 8 && length <128){
     resultEL.innerText = generatePassword(
         hasLower, 
         hasUpper, 
@@ -31,6 +48,13 @@ generateEL.addEventListener('click', () => {
         hasSymbol, 
         length
         );
+        document.getElementById("demo").textContent = " ";
+
+} else {
+    console.log("We're workin over here")
+    document.getElementById("demo").textContent = "Length must be between 8 and 128. ";
+}
+    
 });
 
 //Copy password to clipboard
