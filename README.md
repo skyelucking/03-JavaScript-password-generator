@@ -28,7 +28,7 @@ This application generates a password that:
 <a href="https://github.com/skyelucking/03-JavaScript-password-generator">https://github.com/skyelucking/03-JavaScript-password-generator</a>
 
 <hr>
-Now here is your joke...<br>
+<h1>Now here is your joke...<br></h1>
 Apparently you can’t use “ beefstew” as a password.
 
 <br>
