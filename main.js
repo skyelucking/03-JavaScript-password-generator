@@ -9,6 +9,7 @@ const uppercaseEL = document.getElementById('uppercase');
 const generateEL = document.getElementById('generate');
 const clipboardEL = document.getElementById('clipboard');
 
+//Declare elements
 const randomFunc = {
     lower: getRandomLower,
     upper: getRandomUpper,
@@ -35,8 +36,7 @@ if (length > 8 && length <128){
         document.getElementById("demo").textContent = " ";
 
 } else {
-    console.log("We're workin over here")
-    document.getElementById("demo").textContent = "Length must be between 8 and 128. ";
+        document.getElementById("demo").textContent = "Length must be between 8 and 128. ";
 }
     
 });
@@ -66,14 +66,14 @@ function generatePassword(lower, upper, number, symbol, length) {
 let generatedPassword = '';
 
 const typesCount = lower + upper + number + symbol;
-console.log('typesCount: ', typesCount);
+// console.log('typesCount: ', typesCount);
 
 const typesArr =[{lower}, {upper}, {number}, {symbol}].filter
 (
     item => Object.values(item)[0]
 );
 
-console.log('typesArr: ', typesArr);
+// console.log('typesArr: ', typesArr);
 if(typesCount === 0) {
     return '';
 }
@@ -82,7 +82,7 @@ for (let i = 0; i < length; i+= typesCount) {
     typesArr.forEach(type => {
         const funcName = Object.keys(type) [0];
 
-console.log('funcName: ', funcName)
+// console.log('funcName: ', funcName)
 
       generatedPassword += randomFunc[funcName]();
     });
@@ -96,24 +96,24 @@ return finalPassword;
 }
 
 
-// Generator Functions  - charset link: http://www.net-comber.com/charset.html//
+// Generator Functions  - Get Random Characters Using a CHaracter Set
 function getRandomLower() {
     return String.fromCharCode(Math.floor(Math.random()* 26 + 97));
 }
-    console.log(getRandomLower());
+    // console.log(getRandomLower());
 
 function getRandomUpper() {
     return String.fromCharCode(Math.floor(Math.random()* 26 + 65));
 }
-    console.log(getRandomUpper());
+    // console.log(getRandomUpper());
 
 function getRandomNumber() {
     return String.fromCharCode(Math.floor(Math.random()* 10 + 48));
 }
-    console.log(getRandomNumber());
+    // console.log(getRandomNumber());
     
 function getRandomSymbol() {
     const symbols = '!@#$%^&()_+?';
     return symbols[Math.floor(Math.random() * symbols.length)];
 }
-    console.log(getRandomSymbol());
+    // console.log(getRandomSymbol());
